@@ -32,6 +32,10 @@ header {
     padding: 0 5vw;
     box-sizing: border-box;
     text-align: right;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInHeader 1s ease-out forwards;
+animation-delay: 0.2s;
 }
 
 .header_left p {
@@ -50,6 +54,10 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 10vw;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation-delay: 0.5s;
+    animation: fadeInHeader 1s ease-out forwards;
 }
 
 .header_btn {
@@ -92,8 +100,11 @@ section h1 {
 
 .section_item img {
     height: 100%;
+    transition: transform 0.3s ease;
 }
-
+.section_item img:hover {
+    transform: scale(1.1);
+}
 
 .projects {
     color: white;
@@ -124,4 +135,10 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
+}
+@keyframes fadeInHeader {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
